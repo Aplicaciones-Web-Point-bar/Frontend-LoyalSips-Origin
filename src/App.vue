@@ -7,7 +7,12 @@ export default {
         items: [
           { label: "Home", to: "/home" },
           { label: "About", to: "/about" },
+          { label: 'Services', to: '/services' },
+          { label: 'Drinks', to: '/drinks'},
+          { label: 'Support', to: '/support'},
+          { label: 'Contact', to: '/contact'},
           { label: 'bares', to: '/bares' }
+
         ],
       };
     },
@@ -65,7 +70,19 @@ export default {
   <RouterView />
 </template>
 
-<style >
+<style>
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: rgba(0, 0, 0, 0.91);
+  position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,5 +101,6 @@ export default {
   display: block;
   margin: 0 auto;
 }
+
 
 </style>
