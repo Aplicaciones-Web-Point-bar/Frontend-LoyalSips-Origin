@@ -81,6 +81,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: rgba(0, 0, 0, 0.91);
   position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
+  color: #c5bfbc;
 }
 
 * {
@@ -95,6 +96,7 @@ body {
   display: block;
   margin: 0 auto;
 }
+
 .account-logo {
   width: 40px;
   height: auto;
