@@ -1,9 +1,9 @@
 <template>
+  <div class="titulo-servicios">
+    <h1>Servicios</h1></div>
+
   <div class="servicios-container">
     <div class="fondo-gris"></div>
-    <div class="titulo-servicios">
-      <b>Servicios</b></div>
-
     <div class="servicio-box cliente-container">
       <h3><b>Clientes</b></h3>
       <div align="justify">
@@ -49,13 +49,12 @@
 }
 
 .titulo-servicios {
-  font-size: 5rem;
-  margin-top: 0.8em; /* Agrega margen superior para separarlo del elemento superior */
-  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2em;
   color: #c5bfbc;
   font-family: 'Inter', sans-serif;
 }
-
 
 .servicio-box {
   margin: 2%;
@@ -80,30 +79,33 @@
 
 .cliente-container{
   background-color: rgb(13, 166, 225);
-  max-width: 45em;
+  max-width: 37em;
   overflow: hidden;
   box-shadow: 0 0 80px rgb(48, 111, 136);
-  height: 43em; /* Establece la altura fija para ambos cuadros */
+  height: 37em; /* Establece la altura fija para ambos cuadros */
 }
 .bar-container {
   background-color: rgb(173, 91, 222);
-  max-width: 45em;
+  max-width: 37em;
   overflow: hidden;
   box-shadow: 0 0 80px rgb(109, 55, 141);
-  height: 43em; /* Establece la altura fija para ambos cuadros */
+  height: 37em; /* Establece la altura fija para ambos cuadros */
 }
 
-/*titulo de los contenedores*/
 h3 {
   font-size: 3em;
   margin-bottom: 1em;
 }
 
-/*texto de los contenedores*/
 p {
-  font-size: 1.9em;
+  font-size: 1.6em;
   line-height: 1.3em;
   color: #000000;
+}
+
+h2 {
+  font-size: 1.9em;
+  margin-bottom: 1em;
 }
 
 
@@ -127,4 +129,7 @@ p {
   font-size: 1em;
 }
 
+
 </style>
+<script setup>
+</script>
