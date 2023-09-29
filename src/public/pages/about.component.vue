@@ -6,11 +6,11 @@
     <p>Generando oportunidades para los amantes de la vida nocturna: <br>Donde los consumidores y los negocios se encuentran en un <br> brindis de éxito compartido</p>
   </div>
   <div class="conImage">
-    <img class="image" src=" " alt="">
+    <img class="image" src="src/assets/logo-loyal-sips-seccion-nosotros.png" alt="">
   </div>
   <div class="rectangle"></div>
   <div class="Simage">
-    <img class="image" src="" alt="">
+    <img class="image" src="assets/image/image-seccion%20contacto.png" alt="">
   </div>
   <div class="text">
     <p>
@@ -84,6 +84,7 @@ p {
 }
 
 
+
 button {
   background-color: #83838d;
   color: #fff;
@@ -119,7 +120,8 @@ button:hover {
   text-align: center; /* Centra el contenido del rectángulo horizontalmente */
   margin-right: 10cm;
   margin-left: 16cm;
-  margin-top: -4cm;
+  margin-top: -5cm;
+  margin-top: 0cm;
   border-radius: 15px; /* Ajusta el valor según el radio de curvatura que desees */
 }
 
