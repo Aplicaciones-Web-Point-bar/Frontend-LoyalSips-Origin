@@ -8,7 +8,6 @@ export default {
           { label: "Home", to: "/home" },
           { label: "About", to: "/about" },
           { label: 'Services', to: '/services' },
-          { label: 'Drinks', to: '/drinks'},
           { label: 'Support', to: '/support'},
           { label: 'Contact', to: '/contact'},
           { label: 'bares', to: '/bares' }
