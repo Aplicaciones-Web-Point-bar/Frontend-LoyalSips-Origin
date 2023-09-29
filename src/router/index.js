@@ -3,6 +3,8 @@ import HomeComponent from "../public/pages/home.component.vue";
 import AboutComponent from "../public/pages/about.component.vue";
 import BaresComponent from "../learning/pages/bares.component.vue";
 import ServicesComponent from "../public/pages/services.component.vue";
+import SupportComponent from "../public/pages/support.component.vue";
+import ContactComponent from "../public/pages/contact.component.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -41,6 +43,11 @@ const router = createRouter({
       path: "/support",
       name: "support",
       component: () => import("../public/pages/support.component.vue"),
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: () => import("../public/pages/contact.component.vue"),
     }
   ]
 })

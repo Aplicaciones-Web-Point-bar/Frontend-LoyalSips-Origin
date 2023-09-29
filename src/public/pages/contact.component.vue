@@ -1,147 +1,206 @@
 <template>
   <div>
-    <h1>About</h1>
-    <br>
-    <h2>Somos Loyalsips</h2>
-    <p>Generando oportunidades para los amantes de la vida nocturna: <br>Donde los consumidores y los negocios se encuentran en un <br> brindis de éxito compartido</p>
-  </div>
-  <div class="conImage">
-    <img class="image" src="src/assets/LoyalSips-logoOK.png" alt="">
-  </div>
-  <div class="rectangle"></div>
-  <div class="Simage">
-    <img class="image" src="assets/image/image-seccion%20contacto.png" alt="">
-  </div>
-  <div class="text">
-    <p>
-      "Loyalsips revoluciona la experiencia de <br>
-      en bares, ofreciendo mejoras <br>
-      tanto para los clientes como para los <br>
-      propietarios. Proporcionamos a los <br>
-      dueños de bares las herramientas <br>
-      necesarias para un control efectivo de la <br>
-      administracion, al tiempo que <br>
-      enriquecemos la experiencia <br>
-      de los clientes en su establecimiento"
-    </p>
+    <div class="container-contact">
+      <h1 class="titulo-contact">Contacto</h1>
+      <p class="p-titulo">
+        "Estamos aquí para atender tus necesidades con un servicio de primera en la industria de la vida nocturna. ¡Contáctanos y hagamos crecer juntos tu negocio!"
+      </p>
+    </div>
+
+    <section class="section-container-contact">
+      <div class="left">
+        <section id="formulario">
+          <h2 class="titulo-formulario">Formulario de Contacto</h2>
+          <form @submit.prevent="submitForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" v-model="formData.nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" v-model="formData.email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" v-model="formData.mensaje" rows="4" required></textarea>
+
+            <input type="submit" value="Enviar">
+          </form>
+        </section>
+      </div>
+      <div class="right">
+        <div class="contenido-derecha">
+          <h2>Información </h2>
+          <img
+              width="200px"
+              alt=""
+          />
+          <p>123 Calle Magdalena Lima, Surco.</p>
+          <p>+51 989836726</p>
+          <p>Lima, Perú</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutComponent', // Nombre del componente
-  // Datos, métodos, eventos, etc., van aquí
-}
+  data() {
+    return {
+      formData: {
+        nombre: "",
+        email: "",
+        mensaje: ""
+      }
+    };
+  },
+  methods: {
+    submitForm() {
+      // Aquí puedes agregar el código para enviar el formulario, por ejemplo, haciendo una solicitud HTTP
+      // utilizando axios o fetch.
+      // this.formData contiene los datos del formulario.
+    }
+  }
+};
 </script>
 
 <style scoped>
-body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: SansSerif, sans-serif;
-  background-color: rgba(0, 0, 0, 0.68);
-  padding: 5cm;
-}
-
-.content {
-  display: flex;
-  flex-direction: row-reverse; /* Colocar la imagen a la derecha */
-  align-items: center;
-}
-
-.text {
-  flex: 4; /* Ocupar el espacio restante */
-}
-
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-  color: #ffffff;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  margin-top: 1cm;
+/* Estilos para el contenedor principal */
+.container-contact {
+  background-color: #171717;
   text-align: center;
+  padding: 20px;
 }
-h2{
-  font-size: 80px;
-  font-weight: bold;
-  color: #ffffff;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  margin-top: 1cm;
+
+.titulo-contact {
+  font-size:4em;
   text-align: center;
+  margin-top: 1.4em;
+  margin-bottom: 1em;
+  color: #c5bfbc;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
 }
-p {
-  font-size: 15px;
+
+.p-titulo {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #c5bfbc;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px; /* Ajusta el ancho máximo según tu diseño */
+
+}
+
+/* Estilos para el formulario de contacto */
+#formulario {
+  background-color: #4b4a4a;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formulario h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
   color: #ffffff;
-  margin-bottom: 60px;
-  text-align: justify; /* Alinea el texto a la justificación */
-  text-align-last: center; /* Centra la última línea del texto */
 }
 
+#formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
-button {
-  background-color: #83838d;
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#formulario input[type="submit"] {
+  background-color: #DE9400;
   color: #fff;
-  border: none;
-  border-radius: 10px;
   padding: 10px 20px;
-  font-size: 18px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
+
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-button:hover {
-  background-color: #0056b3;
+.section-container-contact{
+  display: flex;
+  background-color: #171717;
+  padding: 30px;
+  justify-content: space-between;
 }
-
-
-
-.conImage {
-  text-align: left;
-  margin-right: 1cm;
-  margin-left: 3cm;
-  margin-top: -6cm;
-}
-
-
-/* En tu archivo CSS o en un bloque de estilo en tu documento HTML */
-.rectangle {
-  width: 700px; /* Ancho del rectángulo */
-  height: 200px; /* Altura del rectángulo */
-  background-color: rgba(0, 0, 0, 0.29); /* Color de fondo del rectángulo */
-  border: 2px solid rgba(0, 0, 0, 0.3); /* Borde del rectángulo */
-  padding: 30px; /* Espacio de relleno dentro del rectángulo */
-  text-align: center; /* Centra el contenido del rectángulo horizontalmente */
-  margin-right: 10cm;
-  margin-left: 16cm;
-  margin-top: -4cm;
-  border-radius: 15px; /* Ajusta el valor según el radio de curvatura que desees */
+/* Estilos para la sección izquierda (formulario) */
+.left {
+  background-color: #4b4a4a;
+  margin: 80px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  padding: 90px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 
 
-.Simage {
-  max-width: 120%; /* Tamaño máximo de la imagen */
-  height: auto; /* Ajusta la altura de la imagen automáticamente */
-  text-align: center; /* Centra el contenido del rectángulo horizontalmente */
-  margin-right: 1cm;
-  margin-left: 11cm;
-  margin-top: -6.6cm;
+/* Estilos para la sección derecha (contenido adicional) */
+.right {
+  margin: 80px;
+  background-color: #4b4a4a;
+  padding: 90px;
+  border-radius: 5px;
+
+  width: 30%;
+
+
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra para el contenedor */
 }
 
-.text {
-  font-size: 20px;
+.right h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.right p {
+  font-size: 1.2em;
+  line-height: 1.4em;
   color: #ffffff;
-  margin-bottom: 60px;
-  text-align: justify; /* Alinea el texto a la justificación */
-  text-align-last: center; /* Centra la última línea del texto */
-  margin-right: -8cm;
-  margin-left: -9cm;
-  margin-top: 1.1cm;
+}
+
+
+
+/* Estilos para el contenido dentro de la sección derecha */
+.contenido-derecha {
+  text-align: center;
+
+}
+
+.contenido-derecha h2 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.contenido-derecha img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.contenido-derecha p {
+  font-size: 1.2em;
+  color: #fff;
+  justify-content: center ;
 }
 </style>
