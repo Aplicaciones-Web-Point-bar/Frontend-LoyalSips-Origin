@@ -10,7 +10,11 @@ export default {
           { label: 'Services', to: '/services' },
           { label: 'Support', to: '/support'},
           { label: 'Contact', to: '/contact'},
-          { label: 'bares', to: '/bares' }
+          { label: 'bares', to: '/bares' },
+          { label: 'login', to: '/login' },
+          { label: 'signup', to: '/signup' }
+
+
 
         ],
       };

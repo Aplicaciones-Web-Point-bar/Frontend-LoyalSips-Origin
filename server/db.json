@@ -2,26 +2,26 @@
   "tutorials": [
     {
       "id": 1,
-      "title": "The Vue Tutorials",
-      "description": "The best tips and tutorials for Vue.",
-      "published": false
+      "name": "Bar La Esquina",
+      "description": "Pisco Sour + Cerveza por S/. 20",
+      "image": "assets/image/pisco.jpg"
     },
     {
       "id": 2,
-      "title": "Amazing Microsoft .NET",
-      "description": "Weekly tutorials about .NET and ASP.NET Core.",
+      "name": "Bar La Esquina",
+      "description": "Chilcano + Cerveza artesanal por S/. 25",
       "published": false
     },
     {
       "id": 3,
-      "title": "JavaScript for All",
-      "description": "Tips an tricks about JavaScript from scratch.",
+      "name": "Bar El Rincon",
+      "description": "Mojito + Sangria por S/. 22",
       "published": false
     },
     {
       "id": 4,
-      "title": "Vue Unleashed",
-      "description": "Vue at its best.",
+      "name": "Bar La Taberna",
+      "description": "Martini + whisky sour por S/. 24",
       "published": false
     }
   ]

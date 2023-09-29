@@ -1,33 +1,9 @@
 <template>
     <div>
+      <div>
+        <h1 class="titulo-contact">Drink Catalogue</h1>
+      </div>
       <div class="card">
-        <pv-toolbar class="mb-4">
-          <template #start>
-            <pv-button
-                label="New"
-                icon="pi pi-plus"
-                class="p-button-success mr-2"
-                @click="openNew"
-            />
-            <pv-button
-                label="Delete"
-                icon="pi pi-trash"
-                class="p-button-danger"
-                @click="confirmDeleteSelected"
-                :disabled="!selectedTutorials || !selectedTutorials.length"
-            />
-          </template>
-  
-          <template #end>
-            <pv-button
-                label="Export"
-                icon="pi pi-download"
-                class="p-button-help"
-                @click="exportToCSV($event)"
-            />
-          </template>
-        </pv-toolbar>
-  
         <pv-data-table
             ref="dt"
             :value="tutorials"
@@ -41,20 +17,7 @@
             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} tutorials"
             responsiveLayout="scroll"
         >
-          <template #header>
-            <div class="table-header flex flex-column md:flex-row md:justify-content-between">
-              <h5 class="mb-2 md:m-0 p-as-md-center text-xl">Manage Tutorials</h5>
-              <span class="p-input-icon-left">
-                <i class="pi pi-search" />
-                <pv-input-text
-                    v-model="filters['global'].value"
-                    placeholder="Search..."
-                />
-              </span>
-            </div>
-          </template>
 
-  
           <pv-column
               selectionMode="multiple"
               style="width: 3rem"
@@ -67,8 +30,8 @@
               style="min-width: 12rem"
           ></pv-column>
           <pv-column
-              field="title"
-              header="Title"
+              field="name"
+              header="Name"
               :sortable="true"
               style="min-width: 16rem"
           ></pv-column>
@@ -78,19 +41,6 @@
               :sortable="true"
               style="min-width: 16rem"
           ></pv-column>
-          <pv-column
-              field="status"
-              header="Status"
-              :sortable="true"
-              style="min-width: 12rem"
-          >
-              <template #body="slotProps">
-                  <pv-tag v-if="slotProps.data.status === 'Published'" severity="success">
-                      {{ slotProps.data.status }}
-                  </pv-tag>
-                  <pv-tag v-else severity="info">{{ slotProps.data.status }}</pv-tag>
-              </template>
-          </pv-column>
           <pv-column :exportable="false" style="min-width: 8rem">
               <template #body="slotProps">
                   <pv-button
@@ -118,15 +68,15 @@
         <span class="p-float-label">
           <pv-input-text
               type="text"
-              id="title"
-              v-model.trim="tutorial.title"
+              id="name"
+              v-model.trim="tutorial.name"
               required="true"
               autofocus
-              :class="{ 'p-invalid': submitted && !tutorial.title }"
+              :class="{ 'p-invalid': submitted && !tutorial.name }"
           />
-          <label for="title">Title</label>
-          <small class="p-error" v-if="submitted && !tutorial.title">
-            Title is required.
+          <label for="name">name</label>
+          <small class="p-error" v-if="submitted && !tutorial.name">
+            name is required.
           </small>
         </span>
       </div>
@@ -192,7 +142,7 @@
       <div class="confirmation-content">
         <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem" />
         <span v-if="tutorial">
-            Are you sure you want to delete <b>{{ tutorial.title }}</b>?
+            Are you sure you want to delete <b>{{ tutorial.name }}</b>?
         </span>
       </div>
       <template #footer>
@@ -237,14 +187,14 @@
         />
       </template>
     </pv-dialog>
-  
+
     </div>
   </template>
-  
+
   <script>
   import { TutorialsApiService } from "../services/tutorials-api.service";
   import { FilterMatchMode } from "primevue/api";
-  
+
   export default {
     name: "tutorial-list",
     data() {
@@ -255,10 +205,6 @@
         deleteTutorialsDialog: false,
         tutorial: {},
         selectedTutorials: null,
-        statuses: [
-          { label: "Published", value: "published" },
-          { label: "Unpublished", value: "unpublished" },
-        ],
         tutorialsService: null,
         filters: {},
         submitted: false,
@@ -277,7 +223,7 @@
       });
       this.initFilters();
     },
-  
+
     methods: {
       getDisplayableTutorial(tutorial) {
         tutorial.status = tutorial.published ? this.statuses[0].label : this.statuses[1].label;
@@ -294,7 +240,7 @@
       getStorableTutorial(displayableTutorial) {
         return {
           id: displayableTutorial.id,
-          title: displayableTutorial.title,
+          name: displayableTutorial.name,
           description: displayableTutorial.description,
           published: displayableTutorial.status.label === "Published",
         };
@@ -314,7 +260,7 @@
       },
       saveTutorial() {
         this.submitted = true;
-        if (this.tutorial.title.trim()) {
+        if (this.tutorial.name.trim()) {
           if (this.tutorial.id) {
             console.log(this.tutorial);
             this.tutorial = this.getStorableTutorial(this.tutorial);
@@ -397,14 +343,25 @@
     },
   };
   </script>
-  
+
   <style scoped>
+  .titulo-contact {
+    font-size:4em;
+    text-align: center;
+    margin-top: 1.4em;
+    margin-bottom: 1em;
+    color: #c5bfbc;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+  }
   .confirmation-content {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
+.card {
+  background-color: #FBF7F7C6;
+}
   .table-header {
     display: flex;
     align-items: center;
@@ -413,7 +370,7 @@
       align-items: start;
     }
   }
-  
+
   @media screen and (max-width: 960px) {
     ::v-deep(.p-toolbar) {
       flex-wrap: wrap;
@@ -423,4 +380,3 @@
     }
   }
   </style>
-  
