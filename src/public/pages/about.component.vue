@@ -6,11 +6,11 @@
     <p>Generando oportunidades para los amantes de la vida nocturna: <br>Donde los consumidores y los negocios se encuentran en un <br> brindis de éxito compartido</p>
   </div>
   <div class="conImage">
-    <img class="image" src="src/assets/LoyalSips-logoOK.png" alt="">
+    <img class="image" src=" " alt="">
   </div>
   <div class="rectangle"></div>
   <div class="Simage">
-    <img class="image" src="assets/image/image-seccion%20contacto.png" alt="">
+    <img class="image" src="" alt="">
   </div>
   <div class="text">
     <p>
