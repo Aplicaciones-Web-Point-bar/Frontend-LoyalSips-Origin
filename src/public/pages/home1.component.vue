@@ -1,4 +1,5 @@
 <script setup>
+
 </script>
 
 
@@ -122,7 +123,7 @@ Canjea por producto
   background-color: #24242d;
   margin:10px;
   border-radius: 40px;
-  box-shadow: 5px 5px 15px gray;
+  box-shadow: 5px 5px 15px;
   padding: 10px;
   display: flex;
   flex-direction:column;
