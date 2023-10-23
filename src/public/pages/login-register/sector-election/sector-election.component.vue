@@ -26,7 +26,7 @@
 
 
 <!--Styles-->
-<style scoped>
+<style >
 .container-login {
   display: flex;
   flex-direction: column;
@@ -69,6 +69,7 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6rem rgba(17, 135, 173, 0.66);
+  cursor: pointer;
 }
 
 .button-cliente:hover {
@@ -92,6 +93,7 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6rem rgba(146, 63, 183, 0.66);
+  cursor: pointer;
 }
 
 .button-empresa:hover {
@@ -107,6 +109,7 @@
 
 <!--Scripts-->
 <script>
+/*enrutamos con metodos para la redireccion al hacer click en el boton de elegir sector*/
 export default {
   methods:{
     redirectToClientLogin(){

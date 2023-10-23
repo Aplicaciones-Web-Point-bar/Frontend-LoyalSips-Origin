@@ -68,6 +68,7 @@ export default {
 
     </pv-toolbar>
   </header>
+  <div class="espacio"></div>
 
   <pv-sidebar v-model:visible="drawer"> </pv-sidebar>
   <RouterView />
@@ -75,7 +76,16 @@ export default {
 
 <style>
 
-html, body {
+.espacio{
+  height: 6.5%;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+}
+
+.html, .body {
   height: 100%;
 }
 
@@ -83,29 +93,21 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: rgba(0, 0, 0, 0.91);
-  position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
+  //position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
   color: #ffffff;
 }
 
-* {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-}
+}/**/
+
 .img-logo{
   width: 80px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
-.account-logo {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
 </style>
