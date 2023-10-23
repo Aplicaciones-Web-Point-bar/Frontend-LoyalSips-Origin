@@ -1,24 +1,21 @@
 <script>
 export default {
-    name: "app",
-    data() {
-      return {
-        drawer: false,
-        /*Muestra las secciones en el toolbar*/
-        items: [
-          { label: "Home", to: "/home" },
-          { label: 'Bares', to: '/bares' },
-          // { label: 'Login', to: '/login' },
-          // { label: 'Sign up', to: '/signup' },
-          { label: 'Profile', to: '/profile'},
-          { label: 'Support', to: '/support'},
-          { label: 'Login', to: '/login-register/sector-election'}
-
-
-
-        ],
-      };
-    },
+  name: "app",
+  data() {
+    return {
+      drawer: false,
+      /*Muestra las secciones en el toolbar*/
+      items: [
+        { label: "Home", to: "/home" },
+        { label: 'Bares', to: '/bares' },
+        // { label: 'Login', to: '/login' },
+        // { label: 'Sign up', to: '/signup' },
+        { label: 'Profile', to: '/profile'},
+        { label: 'Support', to: '/support'},
+        { label: 'Login', to: '/login-register/sector-election'}
+      ],
+    };
+  },
 };
 </script>
 
@@ -68,7 +65,7 @@ export default {
 
     </pv-toolbar>
   </header>
-  <div class="espacio"></div>
+  <div class="espacio"><br><br><br><br><br></div>
 
   <pv-sidebar v-model:visible="drawer"> </pv-sidebar>
   <RouterView />
@@ -82,6 +79,7 @@ export default {
 
 header{
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -93,7 +91,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: rgba(0, 0, 0, 0.91);
-  //position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
+//position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
   color: #ffffff;
 }
 

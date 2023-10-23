@@ -112,7 +112,7 @@ Canjea por producto
 }
 .separacion{
   width: 80%;
-  height: 500px;
+  height: 200px;
   margin: 60px 0;
   display: flex;
   justify-content: space-between;
