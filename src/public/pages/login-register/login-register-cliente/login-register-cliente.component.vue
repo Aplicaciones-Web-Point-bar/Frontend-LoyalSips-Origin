@@ -66,7 +66,6 @@
           </div>
         </form>
       </div>
-
     </div>
 </template>
 
@@ -95,17 +94,19 @@ export default {
 /*<-------SECTION LOGIN----->*/
 .wrapper {
   display: flex;
-  background: transparent;
+  background: rgba(232, 37, 37, 0.5);
   border: 2px solid #fff;
   border-radius: 2rem;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(2rem);
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 2rem;
   max-width: 35em;
-  margin: 7rem auto;
+  margin: 15rem auto;
   overflow: hidden;
+  z-index: -1;
+
 }
 
 

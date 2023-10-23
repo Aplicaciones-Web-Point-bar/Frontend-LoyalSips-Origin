@@ -19,7 +19,6 @@
         <button class="button-login button-empresa">Click Aquí</button>
       </divider>
     </div>
-
   </div>
 
 </template>
@@ -33,6 +32,7 @@
   align-items: center;
   text-align: center;
   padding: 20px;
+  margin-top: 8rem;
 }
 
 .image-sectores {
@@ -99,10 +99,6 @@
 .button-empresa:hover {
   background-color: rgb(201, 92, 248);
 }
-
-/* Estilos adicionales según tu preferencia */
-
-
 
 </style>
 
