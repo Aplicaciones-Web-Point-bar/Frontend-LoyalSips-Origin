@@ -20,6 +20,48 @@
 
 <style>
 
+
+.home{
+  /*background-image:linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.90));
+
+   */
+}
+
+
+.Titulo {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center; /* Centra horizontalmente el texto */
+  margin-bottom: 3.3rem;
+  margin-top: 3rem;
+  line-height: 5rem;
+}
+
+.Subtitulo {
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 4em;
+  line-height: 1.5rem;
+}
+
+.get-boton {
+  background-color: #83838d;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 6rem rgb(178, 170, 168);
+}
+
+
 </style>
 
 
