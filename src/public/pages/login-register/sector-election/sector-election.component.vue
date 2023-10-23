@@ -26,9 +26,7 @@
 
 <!--Styles-->
 
-<style >
-
-<style scoped>
+<style>
 
 .container-login {
   display: flex;
