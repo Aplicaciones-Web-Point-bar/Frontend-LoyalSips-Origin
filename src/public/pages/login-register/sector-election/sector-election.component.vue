@@ -25,7 +25,11 @@
 
 
 <!--Styles-->
+
 <style >
+
+<style scoped>
+
 .container-login {
   display: flex;
   flex-direction: column;
@@ -69,7 +73,10 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6rem rgba(17, 135, 173, 0.66);
+
   cursor: pointer;
+
+
 }
 
 .button-cliente:hover {
@@ -93,7 +100,10 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6rem rgba(146, 63, 183, 0.66);
+
   cursor: pointer;
+
+
 }
 
 .button-empresa:hover {

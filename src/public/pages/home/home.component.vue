@@ -16,6 +16,7 @@
 <style>
 
 
+
 /*coloco la imagen de fondo*/
 .home-section {
   background-image:linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.90)),
@@ -80,3 +81,4 @@ export default {
   }
 }
 </script>
+```
