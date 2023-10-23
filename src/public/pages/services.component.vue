@@ -92,21 +92,6 @@
   height: 37em; /* Establece la altura fija para ambos cuadros */
 }
 
-h3 {
-  font-size: 3em;
-  margin-bottom: 1em;
-}
-
-p {
-  font-size: 1.6em;
-  line-height: 1.3em;
-  color: #000000;
-}
-
-h2 {
-  font-size: 1.9em;
-  margin-bottom: 1em;
-}
 
 
 .empezar-button-bar {

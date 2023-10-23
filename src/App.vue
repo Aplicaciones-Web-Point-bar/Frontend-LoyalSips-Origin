@@ -4,15 +4,15 @@ export default {
     data() {
       return {
         drawer: false,
+        /*Muestra las secciones en el toolbar*/
         items: [
           { label: "Home", to: "/home" },
-          { label: "About", to: "/about" },
-          { label: 'Services', to: '/services' },
+          { label: 'Bares', to: '/bares' },
+          // { label: 'Login', to: '/login' },
+          // { label: 'Sign up', to: '/signup' },
+          { label: 'Profile', to: '/profile'},
           { label: 'Support', to: '/support'},
-          { label: 'Contact', to: '/contact'},
-          { label: 'bares', to: '/bares' },
-          { label: 'login', to: '/login' },
-          { label: 'signup', to: '/signup' }
+          { label: 'Login', to: '/login-register/sector-election'}
 
 
 
@@ -54,7 +54,7 @@ export default {
       <template #end>
 
         <div class="flex-column" >
-          <a class="bg-auto" >Jose Ampudia   </a>
+          <a class="bg-auto" >Jocais Ampudia   </a>
           <i class="pi pi-user" style="font-size: 2rem"></i>
           <i class="pi-sign-out" style="font-size: 2.5rem"></i>
         </div>
@@ -68,6 +68,7 @@ export default {
 
     </pv-toolbar>
   </header>
+  <div class="espacio"></div>
 
   <pv-sidebar v-model:visible="drawer"> </pv-sidebar>
   <RouterView />
@@ -75,7 +76,16 @@ export default {
 
 <style>
 
-html, body {
+.espacio{
+  height: 6.5%;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+}
+
+.html, .body {
   height: 100%;
 }
 
@@ -83,29 +93,21 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: rgba(0, 0, 0, 0.91);
-  position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
-  color: #c5bfbc;
+  //position: relative; /* Agrega esta línea para que el elemento con el nuevo fondo sea relativo a body */
+  color: #ffffff;
 }
 
-* {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-}
+}/**/
+
 .img-logo{
   width: 80px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
-.account-logo {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
 </style>

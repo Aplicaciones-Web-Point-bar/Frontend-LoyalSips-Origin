@@ -348,7 +348,7 @@
   .titulo-contact {
     font-size:4em;
     text-align: center;
-    margin-top: 1.4em;
+    //margin-top: 1.4em;
     margin-bottom: 1em;
     color: #c5bfbc;
     font-family: 'Inter', sans-serif;
