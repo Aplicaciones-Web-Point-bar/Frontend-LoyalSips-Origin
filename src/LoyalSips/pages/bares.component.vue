@@ -1,7 +1,7 @@
 <template>
     <div>
       <div>
-        <h1 class="titulo-contact">Drink Catalogue</h1>
+        <h1 class="titulo-bar">Drink Catalogue</h1>
       </div>
       <div class="card">
         <pv-data-table
@@ -345,10 +345,10 @@
   </script>
 
   <style scoped>
-  .titulo-contact {
+  .titulo-bar {
     font-size:4em;
     text-align: center;
-    //margin-top: 1.4em;
+    margin-top: 10rem; /*espaciado superior*/
     margin-bottom: 1em;
     color: #c5bfbc;
     font-family: 'Inter', sans-serif;

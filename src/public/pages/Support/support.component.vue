@@ -72,7 +72,7 @@ const generateTicket = () => {
 .title-support {
   font-size:4em;
   text-align: center;
-  margin-top: 1.4em;
+  margin-top: 10rem;/*espaciado superior*/
   margin-bottom: 1em;
   color: #c5bfbc;
   font-family: 'Inter', sans-serif;
