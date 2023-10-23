@@ -1,0 +1,180 @@
+<!--html-->
+
+<template>
+  <head class >
+    <title>LoyalSips</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body id="body">
+  <div class="contenedor">
+    <h1>Bienvenido a LoyalSips</h1>
+    <p>Puedes ganar puntos y reclamarlos en los bares que más consumas</p>
+    <button>Get Started</button>
+  </div>
+  </body>
+</template>
+
+
+
+<!--styles-->
+
+<style scoped>
+
+.con {
+  //background-image:linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.90)),
+  //url("https://media.discordapp.net/attachments/1145898392631918604/1159951271067910164/fondo-home.png?ex=6532e3cd&is=65206ecd&hm=44a281648a918735584f14d785444d7176a914cc4893bbb7ee9fd4458c297f5b&=&width=1114&height=625");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: SansSerif, sans-serif;
+  margin: 0;
+  position: ;
+  color: #ffffff;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Cambia el valor de alfa para ajustar la opacidad */
+  z-index: -1; /* Coloca la capa detrás del contenido */
+}
+
+.contenedor{
+  padding: 15rem;
+}
+
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center; /* Centra horizontalmente el texto */
+  margin-bottom: 3.3rem;
+  margin-top: 3rem;
+  line-height: 5rem;
+}
+
+p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 4em;
+  line-height: 1.5rem;
+}
+
+button {
+  background-color: #83838d;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 6rem rgb(178, 170, 168);
+}
+
+button:hover {
+  background-color: #3e3e3e;
+}
+
+
+/* vista movil */
+
+@media (max-width: 320px) {
+
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.90)),
+    url("https://media.discordapp.net/attachments/1145898392631918604/1159951271067910164/fondo-home.png?ex=6532e3cd&is=65206ecd&hm=44a281648a918735584f14d785444d7176a914cc4893bbb7ee9fd4458c297f5b&=&width=1114&height=625");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: SansSerif, sans-serif;
+    margin: 0;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de alfa para ajustar la opacidad */
+    z-index: -1; /* Coloca la capa detrás del contenido */
+  }
+
+
+  .contenedor {
+    padding: 2rem; /* Reduzco el padding aún más para pantallas muy pequeñas */
+  }
+
+  h1 {
+    font-size: 3rem; /* Ajusto el tamaño de fuente para pantallas muy pequeñas */
+    line-height: 3.8rem;
+    margin-top: 7rem;
+  }
+
+  p {
+    font-size: 1rem; /* Ajusto el tamaño de fuente para pantallas muy pequeñas */
+  }
+
+  button {
+    padding: 0.8rem 1.2rem; /* Ajusto el espaciado del botón para pantallas muy pequeñas */
+    font-size: 0.9rem; /* Ajusto el tamaño de fuente para pantallas muy pequeñas */
+    margin-top: 2rem;
+  }
+
+  button:hover {
+    background-color: #3e3e3e;
+  }
+
+}
+
+/*pantallas mas grandes que celular*/
+
+@media (max-width: 768px) {
+
+  .contenedor {
+    padding: 2rem; /* Reduzco el padding aún más para pantallas muy pequeñas */
+  }
+
+  h1 {
+    font-size: 3rem; /* Ajusto el tamaño de fuente para pantallas muy pequeñas */
+    line-height: 3.8rem;
+    margin-top: 7rem;
+  }
+
+  p {
+    font-size: 1rem; /* Ajusto el tamaño de fuente para pantallas muy pequeñas */
+  }
+
+  button {
+    padding: 0.8rem 1.2rem; /* Ajusto el espaciado del botón para pantallas muy pequeñas */
+    font-size: 0.9rem; /* Ajusto el tamaño de fuente para pantallas muy pequeñas */
+    margin-top: 2rem;
+  }
+
+  button:hover {
+    background-color: #3e3e3e;
+  }
+
+}
+
+</style>
+
+<!--scripts-->
+
+<script setup>
+
+</script>
