@@ -1,0 +1,170 @@
+[33mcommit 94f77298c27cc1aa32c3ea5baccbfbd154dcdb4e[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/updateNomenclature[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 82cc98d c16a5a3
+Author: leonardox-lh <112042808+leonardox-lh@users.noreply.github.com>
+Date:   Thu Sep 28 23:47:40 2023 -0500
+
+    Merge pull request #11 from Aplicaciones-Web-Point-bar/develop
+    
+    Develop
+
+[33mcommit c16a5a36be4efe366fbb70b11c9b7ba94afc1d15[m
+Merge: 98352cb 292fc26
+Author: leonardox-lh <112042808+leonardox-lh@users.noreply.github.com>
+Date:   Thu Sep 28 23:38:56 2023 -0500
+
+    Merge pull request #10 from Aplicaciones-Web-Point-bar/feature/deploy
+    
+    feat(deploy): Add deploy
+
+[33mcommit 292fc2685323557963558b65c56e40ffdede33b4[m
+Author: leonardo <u202124304@upc.edu.pe>
+Date:   Thu Sep 28 23:37:48 2023 -0500
+
+    feat(deploy): Add deploy
+
+[33mcommit 98352cbc47c6c800a1af3bc81b5bba713d73be41[m
+Merge: e5c5d37 7119e80
+Author: Jean Morin <104330963+Jeanpi-MF@users.noreply.github.com>
+Date:   Thu Sep 28 23:14:10 2023 -0500
+
+    Merge pull request #9 from Aplicaciones-Web-Point-bar/contact
+    
+    contact
+
+[33mcommit 7119e80592c50dc3bcf137f64d992a4e435bc6b5[m[33m ([m[1;31morigin/contact[m[33m)[m
+Author: Jean Morin <jean126pi@gmail.com>
+Date:   Thu Sep 28 23:10:43 2023 -0500
+
+    contact
+
+[33mcommit e5c5d37b2fe50b1741364f8c7ee1d460f24c2071[m
+Author: Jean Morin <jean126pi@gmail.com>
+Date:   Thu Sep 28 22:46:38 2023 -0500
+
+    chore: add
+
+[33mcommit 0365d828ded6065cbbb8544cbc1b56d5982c6a65[m
+Merge: 5d74559 d36aa10
+Author: Jocais Ampudia <116921103+IsaacAmp24@users.noreply.github.com>
+Date:   Thu Sep 28 20:46:54 2023 -0500
+
+    Merge pull request #8 from Aplicaciones-Web-Point-bar/support
+    
+    feat(support): section support implemented
+
+[33mcommit d36aa10ad06dc44e8c32c26cd2f25dd17a437830[m
+Author: IsaacAmp24 <ampudiaflores@gmailcom>
+Date:   Thu Sep 28 20:45:59 2023 -0500
+
+    feat(support): section support implemented
+
+[33mcommit 82cc98d42629497aa819f3771ac3e7ae856ae536[m
+Merge: e686644 5d74559
+Author: Jocais Ampudia <116921103+IsaacAmp24@users.noreply.github.com>
+Date:   Thu Sep 28 19:37:30 2023 -0500
+
+    Merge pull request #7 from Aplicaciones-Web-Point-bar/develop
+    
+    Develop
+
+[33mcommit 5d74559b109f38f08777197c675e6037f8fd5ff2[m
+Merge: b93e885 893d530
+Author: leonardox-lh <112042808+leonardox-lh@users.noreply.github.com>
+Date:   Wed Sep 27 22:32:49 2023 -0500
+
+    Merge pull request #6 from Aplicaciones-Web-Point-bar/feature/home
+    
+    feat(home): Update Home
+
+[33mcommit 893d53005f3e38e698530eed862748c591b0d7fa[m
+Author: leonardo <u202124304@upc.edu.pe>
+Date:   Wed Sep 27 22:31:57 2023 -0500
+
+    feat(home): Update Home
+
+[33mcommit b93e88598280ed6b7fbec030618682e407067c38[m
+Merge: c3f897a 6725a14
+Author: Jean Morin <104330963+Jeanpi-MF@users.noreply.github.com>
+Date:   Wed Sep 27 19:30:22 2023 -0500
+
+    Merge pull request #5 from Aplicaciones-Web-Point-bar/feature/about
+    
+    About Component add
+
+[33mcommit 6725a14994a4d462a0005988aad8fe6aa37f6192[m[33m ([m[1;31morigin/feature/about[m[33m)[m
+Author: Jean Morin <jean126pi@gmail.com>
+Date:   Wed Sep 27 19:27:56 2023 -0500
+
+    About Component add
+
+[33mcommit c3f897a8536c0a9501d67f6cfc654e9d5cd56537[m
+Merge: a211a3c cf0b4db
+Author: Jocais Ampudia <116921103+IsaacAmp24@users.noreply.github.com>
+Date:   Wed Sep 27 04:39:09 2023 -0500
+
+    Merge pull request #4 from Aplicaciones-Web-Point-bar/feature/TS-About
+    
+    feat(about): secction about update
+
+[33mcommit cf0b4db272729e4137531f48dddce192ecd3f552[m
+Author: Jocais <ampudiaflores@gmailcom>
+Date:   Wed Sep 27 04:38:24 2023 -0500
+
+    feat(about): secction about update
+
+[33mcommit a211a3c2c59447fd5a22fb58abdfb82318d627df[m
+Merge: f960033 343df6a
+Author: Jocais Ampudia <116921103+IsaacAmp24@users.noreply.github.com>
+Date:   Wed Sep 27 03:40:29 2023 -0500
+
+    Merge pull request #3 from Aplicaciones-Web-Point-bar/feature/TS-Services
+    
+    feat(services): section services add
+
+[33mcommit 343df6a9cd0fc2e3f0714f68f46d54a990cc99eb[m
+Author: Jocais <ampudiaflores@gmailcom>
+Date:   Wed Sep 27 03:38:52 2023 -0500
+
+    feat(services): section services add
+
+[33mcommit f9600330733d93e23fdc506a92065333443186db[m
+Merge: eb37ee0 72ac948
+Author: Jocais Ampudia <116921103+IsaacAmp24@users.noreply.github.com>
+Date:   Wed Sep 27 02:51:59 2023 -0500
+
+    Merge pull request #2 from Aplicaciones-Web-Point-bar/update
+    
+    update readme
+
+[33mcommit 72ac948062f928d37208a5711e117af7168b999b[m
+Author: Jocais <ampudiaflores@gmailcom>
+Date:   Wed Sep 27 02:40:24 2023 -0500
+
+    update readme
+
+[33mcommit eb37ee0ef24e2479e157d9ab10bba98223f50565[m
+Merge: 43fdd5d 2c12039
+Author: Alarsandro <116916774+Alarsandro@users.noreply.github.com>
+Date:   Wed Sep 27 02:16:36 2023 -0500
+
+    Merge pull request #1 from Aplicaciones-Web-Point-bar/feature/TP-Base
+    
+    Update
+
+[33mcommit 43fdd5d68ca7119add5b62b3552efc04a2ef1700[m
+Author: Alarsandro <you@example.com>
+Date:   Wed Sep 27 02:15:45 2023 -0500
+
+    Updated
+
+[33mcommit 2c1203997247726c77c0f7393f1387e75665685f[m
+Author: Alarsandro <you@example.com>
+Date:   Wed Sep 27 02:12:58 2023 -0500
+
+    Update
+
+[33mcommit e6866448858417f16d6becc3b58b11c3f1d42089[m
+Author: Alarsandro <116916774+Alarsandro@users.noreply.github.com>
+Date:   Wed Sep 27 02:04:43 2023 -0500
+
+    Initial commit

@@ -30,37 +30,40 @@
 
 
 .Titulo {
-  font-size: 5rem;
-  font-weight: bold;
+<style scoped>
+
+.con {
+  //background-image:linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.90)),
+  //url("https://media.discordapp.net/attachments/1145898392631918604/1159951271067910164/fondo-home.png?ex=6532e3cd&is=65206ecd&hm=44a281648a918735584f14d785444d7176a914cc4893bbb7ee9fd4458c297f5b&=&width=1114&height=625");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: SansSerif, sans-serif;
+  margin: 0;
+  position: ;
   color: #ffffff;
-  text-align: center; /* Centra horizontalmente el texto */
-  margin-bottom: 3.3rem;
-  margin-top: 3rem;
-  line-height: 5rem;
 }
 
-.Subtitulo {
-  font-size: 1.4rem;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 4em;
-  line-height: 1.5rem;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Cambia el valor de alfa para ajustar la opacidad */
+  z-index: -1; /* Coloca la capa detrás del contenido */
 }
+
+.contenedor{
+  padding: 15rem;
+}
+
+
+
 
 .get-boton {
-  background-color: #83838d;
-  color: #fff;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  padding: 1.2rem 1.5rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 0 6rem rgb(178, 170, 168);
-}
 
 
 </style>
@@ -77,4 +80,11 @@ export default {
     }
   }
 }
-</script>
+
+button:hover {
+  background-color: #3e3e3e;
+}
+
+
+
+</style>
