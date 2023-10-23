@@ -6,12 +6,10 @@ export default {
         drawer: false,
         items: [
           { label: "Home", to: "/home" },
-          { label: "About", to: "/about" },
-          { label: 'Services', to: '/services' },
+          { label: 'Bares', to: '/bares' },
           { label: 'Support', to: '/support'},
-          { label: 'Contact', to: '/contact'},
-          { label: 'bares', to: '/bares' }
-
+          { label: 'Profile', to: '/profile' },
+          { label: 'login', to: '/login' }
         ],
       };
     },
@@ -54,26 +52,17 @@ export default {
           <i class="pi pi-user" style="font-size: 2rem"></i>
           <i class="pi-sign-out" style="font-size: 2.5rem"></i>
         </div>
-
-
-
       </template>
-
-
-
-
     </pv-toolbar>
+    <div class="espacio"> <br><br><br><br><br></div>
   </header>
 
   <pv-sidebar v-model:visible="drawer"> </pv-sidebar>
+  <div class="espacio"> </div>
   <RouterView />
 </template>
 
 <style>
-
-html, body {
-  height: 100%;
-}
 
 body {
   margin: 0;
@@ -102,6 +91,14 @@ body {
   display: block;
   margin: 0 auto;
 }
+.p-toolbar{
+  position:fixed ;
+  width: 100%;
+}
 
+.espacio{
+  color: aqua;
+  height: 200px;
+}
 
 </style>
