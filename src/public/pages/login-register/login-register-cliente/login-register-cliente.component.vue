@@ -1,11 +1,8 @@
 <template>
+  <div class="login-container">
     <div class="wrapper">
-      <span class="icon-close">
-        <ion-icon name="close"></ion-icon>
-      </span>
       <div class="form-box login">
         <h2>Login</h2>
-
         <form action="#">
           <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
@@ -14,7 +11,7 @@
           </div>
 
 
-        <!--password-->
+          <!--password-->
           <div class="input-box">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
             <input type="password" required>
@@ -67,52 +64,40 @@
         </form>
       </div>
     </div>
+  </div>
 </template>
 
-<script>
-export default {
-  /*sirve para importar los iconos de login*/
-  mounted() {
-    // Crear elementos script
-    const script1 = document.createElement('script');
-    script1.type = 'module';
-    script1.src = 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js';
-
-    const script2 = document.createElement('script');
-    script2.nomodule = true;
-    script2.src = 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js';
-
-    // Agregar los elementos script al DOM
-    document.body.appendChild(script1);
-    document.body.appendChild(script2);
-  }
-}
-</script>
 
 <style>
+
+.login-container{
+  height: calc(100vh - 80px);
+  display:grid;
+  place-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
 
 /*<-------SECTION LOGIN----->*/
 .wrapper {
   display: flex;
-  background: rgba(232, 37, 37, 0.5);
+  align-items: center;
+  justify-content: center;
+  background: rgb(49, 48, 48);
   border: 2px solid #fff;
   border-radius: 2rem;
-  backdrop-filter: blur(2rem);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-  justify-content: center;
-  align-items: center;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 30px rgb(164, 224, 245);
   padding: 2rem;
   max-width: 35em;
-  margin: 15rem auto;
-  overflow: hidden;
-  z-index: -1;
-
 }
+
 
 
 .wrapper .form-box{
   width: 100%;
   padding: 1rem;
+
 }
 
 /*oculatamos el login*/
@@ -120,21 +105,7 @@ export default {
   display: none;
 }
 
-.wrapper .icon-close{
-  position: absolute;
-  top:0;
-  right:0;
-  width: 45px;
-  height: 45px;
-  background: #0780a7;
-  font-size: 1.5rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom-left-radius: 1.3rem;
-  cursor: pointer;
-}
+
 
 
 .form-box h2{
@@ -255,5 +226,25 @@ export default {
 /*<--------SECTION REGISTER--------->*/
 
 
-
 </style>
+
+
+<script>
+export default {
+  /*sirve para importar los iconos de login*/
+  mounted() {
+    // Crear elementos script
+    const script1 = document.createElement('script');
+    script1.type = 'module';
+    script1.src = 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js';
+
+    const script2 = document.createElement('script');
+    script2.nomodule = true;
+    script2.src = 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js';
+
+    // Agregar los elementos script al DOM
+    document.body.appendChild(script1);
+    document.body.appendChild(script2);
+  }
+}
+</script>
