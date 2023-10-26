@@ -8,13 +8,9 @@ export default {
         items: [
           { label: "Home", to: "/home" },
           { label: 'Bares', to: '/bares' },
-          // { label: 'Login', to: '/login' },
-          // { label: 'Sign up', to: '/signup' },
           { label: 'Profile', to: '/profile'},
           { label: 'Support', to: '/support'},
           { label: 'Login', to: '/login-register/sector-election'}
-
-
 
         ],
       };
@@ -56,9 +52,9 @@ export default {
       <template #end>
 
         <div class="flex-column" >
-          <a class="bg-auto" >Jocais Ampudia</a>
+          <a class="bg-auto" >Jocais Ampudia </a>
           <i class="pi pi-user" style="font-size: 2rem"></i>
-          <i class="pi-sign-out" style="font-size: 2.5rem"></i>
+          <!-- <i class="pi-sign-out" style="font-size: 2.5rem"></i> -->
         </div>
       </template>
     </pv-toolbar>
