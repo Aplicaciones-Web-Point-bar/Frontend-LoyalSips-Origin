@@ -8,30 +8,12 @@ el bar ofrezca. Del mismo modo, se tiene como objetivo ayudar al bar a controlar
 de inventario que permita llevar un control de los productos que se tienen en stock, así como también, llevar un control
 de los productos en stock, para evitar que se agoten y no se puedan ofrecer a los clientes.
 
-## Recommended IDE Setup
+## Technologies Used
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and
-disable
-Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Se uilizo el framework de Vue.js para el desarrollo del frontend, en el cual se aplicaron los conocimientos adquiridos en el curso de Vue.js, así como también, se utilizo el framework de Vuetify para el diseño de la interfaz de usuario.
 
-## Customize configuration
+## Preview of Project
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+#### Home Page
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+![Preview](https://media.discordapp.net/attachments/1146639921830973516/1167016897611579482/image.png?ex=654c982e&is=653a232e&hm=79b99fbc23e0c6c0a2a9028a90dcd040e40af8b5edb691e3189c504679b67602&=&width=1031&height=506)
