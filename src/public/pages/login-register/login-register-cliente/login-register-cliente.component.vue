@@ -1,67 +1,109 @@
 <template>
   <div class="login-container">
-    <div class="wrapper">
+    <div class="wrapper" :class="{active : isActive }">
       <div class="form-box login">
         <h2>Login</h2>
-        <form action="#">
-          <div class="input-box">
-            <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required>
-            <label>Email</label>
-          </div>
+        <div class="details-login">
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
 
 
-          <!--password-->
-          <div class="input-box">
-            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" required>
-            <label>Password</label>
-          </div>
-          <div class="remember-forgot">
-            <label><input type="checkbox">Remember me</label>
-            <a href="#">Forgot Password?</a>
-          </div>
-          <button type="submit" class="btn">Login</button>
-          <div class="login-register-cliente">
-            <p>Dont have an account? <a href="#" class="register-link">Register</a></p>
-          </div>
-        </form>
+            <!--password-->
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">Remember me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register-cliente" >
+              <p>Dont have an account? <a href="#" class="register-link" @click="toggleActive">Register</a></p>
+            </div>
+          </form>
+        </div>
       </div>
 
 
       <!--register-->
       <div class="form-box register">
-        <h2>Registration</h2>
+        <h2 class="title-register">Registration</h2>
 
-        <form action="#">
-          <div class="input-box">
-            <span class="icon"><ion-icon name="person"></ion-icon></span>
-            <input type="text" required>
-            <label>Username</label>
-          </div>
+        <div class="details-register">
+              <form action="#">
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="text" required>
+                  <label>Username</label>
+                </div>
 
-          <div class="input-box">
-            <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required>
-            <label>Email</label>
-          </div>
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="call"></ion-icon></span>
+                  <input type="tel" required>
+                  <label>Phone number</label>
+                </div>
 
 
-          <!--password-->
-          <div class="input-box">
-            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" required>
-            <label>Password</label>
-          </div>
-          <div class="remember-forgot">
-            <label><input type="checkbox">Remember me</label>
-            <a href="#">Forgot Password?</a>
-          </div>
-          <button type="submit" class="btn">Login</button>
-          <div class="login-register-cliente">
-            <p>Dont have an account? <a href="#" class="register-link">Register</a></p>
-          </div>
-        </form>
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+                  <input type="text" required>
+                  <label>DNI</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="calendar"></ion-icon></span>
+                  <input type="email" required>
+                  <label>Birthdate</label>
+                </div>
+
+
+                <!--password-->
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                  <input type="password" required>
+                  <label>Password</label>
+                </div>
+
+                <!--Gender-->
+                <div class="gender-details">
+                  <input type="radio" name="gender" id="dot-1">
+                  <input type="radio" name="gender" id="dot-2">
+                  <input type="radio" name="gender" id="dot-3">
+                  <span class="gender-title">Gender</span>
+                  <div class="category">
+                    <label for="dot-1">
+                      <span class="dot one"></span>
+                      <span class="gender">Male</span>
+                    </label>
+
+                    <label for="dot-2">
+                      <span class="dot two"></span>
+                      <span class="gender">Female</span>
+                    </label>
+
+                    <label for="dot-3">
+                      <span class="dot three"></span>
+                      <span class="gender">Other</span>
+                    </label>
+
+                  </div>
+                </div>
+
+                <div class="remember-forgot">
+                  <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register-cliente">
+                  <p>Already have an account? <a href="#" class="login-link" @click="toggleActive">Login</a></p>
+                </div>
+              </form>
+        </div>
       </div>
     </div>
   </div>
@@ -79,20 +121,27 @@
 }
 
 /*<-------SECTION LOGIN----->*/
-.wrapper {
+.login-container .wrapper {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 400px;
+  height: 440px;
   background: rgb(49, 48, 48);
   border: 2px solid #fff;
   border-radius: 2rem;
   backdrop-filter: blur(0.5rem);
   box-shadow: 0 0 30px rgb(164, 224, 245);
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
-  max-width: 35em;
+  transition: height .2s ease;
+  overflow: hidden;
+  
 }
 
-
+.login-container .wrapper.active{
+  height: 720px;
+}
 
 .wrapper .form-box{
   width: 100%;
@@ -100,12 +149,35 @@
 
 }
 
-/*oculatamos el login*/
+/*hace que el login se mueva a la izquierda*/
 .wrapper .form-box.login{
-  display: none;
+  transition: transform .20s ease;
+  transform: translateX(0);
+}
+
+/*hace que el login se mueva a la derecha*/
+.wrapper.active .form-box.login{
+  transition: none;
+  transform: translateX(-450px);
 }
 
 
+.wrapper .form-box.register{
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+  padding: 2.2em;
+}
+
+.wrapper.active .form-box.register{
+  transition: transform .20s ease;
+  transform: translateX(0);
+}
+
+.wrapper .title-register{
+  font-size: 2em;
+  width: 100%;
+}
 
 
 .form-box h2{
@@ -165,9 +237,9 @@
   display: flex;
   justify-content: space-between;
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 500;
-  margin: -0.1rem 0 1.5rem;
+  margin: 1.4rem 0 1.5rem;
 }
 
 .remember-forgot label input{
@@ -223,14 +295,66 @@
   text-decoration: underline;
 }
 
-/*<--------SECTION REGISTER--------->*/
+.gender-details .gender-title{
+  font-size: 1.1rem;
+}
 
+.gender-details .category{
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+.gender-details .category label{
+  display: flex;
+}
+
+
+.gender-details .category .dot{
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 18px;
+  border:5px solid transparent;
+  transition: all .6s ease;
+}
+
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+  border-color: rgb(0, 139, 163);
+  background: #ffffff;
+
+}
+
+form input[type="radio"]{
+  display: none;
+}
+
+form .buttom{
+  height: 45px;
+  margin-bottom: 3rem;
+}
 
 </style>
 
 
+
+
 <script>
 export default {
+  /*muestra en consola al hacer click se activa tanto login o register*/
+  data(){
+    return{
+      isActive: false
+    };
+  },
+
+
   /*sirve para importar los iconos de login*/
   mounted() {
     // Crear elementos script
@@ -245,6 +369,20 @@ export default {
     // Agregar los elementos script al DOM
     document.body.appendChild(script1);
     document.body.appendChild(script2);
+  },
+
+  methods:{
+    redirectTologin(){
+      this.$router.push('/login-register/login-register-cliente')
+    },
+
+    toggleActive(){
+      this.isActive = !this.isActive;
+    }
   }
 }
+
+
+
+
 </script>
