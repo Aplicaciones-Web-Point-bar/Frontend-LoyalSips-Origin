@@ -1,5 +1,4 @@
 <template>
-  <Header/>
   <div class="login-container">
     <div class="wrapper" :class="{active : isActive }">
       <div class="form-box login">
@@ -347,7 +346,6 @@ form .buttom{
 
 
 <script>
-import { App } from 'vue';
 
 export default {
   /*muestra en consola al hacer click se activa tanto login o register*/
@@ -357,10 +355,6 @@ export default {
     };
   },
 
-  name: 'LoginRegisterClienteComponent',
-  components:{
-    App
-  },
 
 
   /*sirve para importar los iconos de login*/
