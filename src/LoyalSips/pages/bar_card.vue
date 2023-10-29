@@ -1,28 +1,41 @@
 <script>
 export default {
-  name: "bar-card",
-
+  name: "bar_card",
+  props: {
+    bar: null,
+  },
 };
 </script>
 
 <template>
 <div class="Content_cards">
   <div class="imagen_card_bar">
-    <img src="https://cdn.discordapp.com/attachments/1146639921830973516/1165901378028306452/Carnaval_cEricMohl_header.png?ex=65488945&is=65361445&hm=ffabc2d2d3294681ddca3184c39a32c2097920d60a6ebb7db40ff2adcb8f91ae&">
+    <img :src="bar.fotos[0]">
   </div>
   <div class="content_card">
     <div class="superior">
-      <div class="title_card_bar">My bar</div>
-      <pv-rating
-          v-model="value" :cancel="false"
-          :model-value="3"
-          :color="red"
-      ></pv-rating>
+      <div class="title_card_bar">
+        <img :src="bar.logo">
+        {{ bar.name }}
+      </div>
+      <div class="div_puntuacion">
+        <i class="pi pi-eye" style="font-size: 1.5rem"></i>
+        <h5>120</h5>
+        <i class="pi pi-user" style="font-size: 1.5rem"></i>
+        <h5>25 </h5>
+        <pv-rating
+            v-model="value" :cancel="false"
+            :model-value="bar.puntaje"
+            :color="red"
+        ></pv-rating>
+      </div>
+
     </div>
     <div class="inferior">
-      <p>Descripción: <br>El bar mas aclamado por todos nosotros ya se encuentra aqui en peru, no te pierdas este super evento.</p>
+      <p>Descripción: <br>{{ bar.description }}</p>
       <div class="espacio_boton">
-        <a href="#" class="boton_card_bar">Ver detalles</a>
+        <h6>Ubicaión: <br> {{bar.ubicacion}}</h6>
+        <a :href="'/bar/'+bar.id" class="boton_card_bar">Ver detalles</a>
 
       </div>
     </div>
@@ -34,7 +47,7 @@ export default {
 <style>
 .Content_cards{
   height: 200px;
-  width: 95%;
+  width: 100%;
   border: 2px solid white;
   box-shadow: inset 0 0 20px #4500cb, 0 0 20px #4500cb;
   border-radius: 10px;
@@ -62,7 +75,8 @@ export default {
   background: blue;
 }
 .imagen_card_bar{
-  width: 31%;
+  margin-left: 15px;
+  width: 28%;
   min-width: 130px;
   max-width: 250px;
   height: 170px;
@@ -88,18 +102,41 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-
+.div_puntuacion{
+  display: flex;
+  align-items: center;
+}
+.div_puntuacion h5 {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
 .inferior{
   display: flex;
   height: 69%;
 }
+.inferior p{
+  font-size: 13px;
+}
 .title_card_bar{
-  margin: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
   font-size: 30px;
+}
+.title_card_bar img{
+  height: 50px;
+  margin-right: 10px;
 }
 .espacio_boton{
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  align-items: end;
+}
+.espacio_boton h6{
+  font-family: "Arial Black";
+  font-size: 14px;
+  margin: 0;
 }
 </style>

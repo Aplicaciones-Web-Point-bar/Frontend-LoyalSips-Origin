@@ -1,8 +1,9 @@
 <script>
-import {BarService} from "../services/bar.service"
-import BarCard from "./bar_card.vue";
+import {BarService} from "../services/bar.service";
+
+import bar_card from "./bar_card.vue"
 export default {
-  components:{BarCard},
+  components:{bar_card},
   name: "bares-list",
   data (){
     return{
@@ -15,18 +16,18 @@ export default {
     this.barService = new BarService();
     this.barService.getPubs()
         .then((response)=>{
-          this.drinks=response.data;
-          console.log(this.drinks)
+          this.pubs=response.data;
+          console.log(this.pubs)
         })
-  }
-};
+  }};
 </script>
 
 <template>
   <div class="title_list">Bares</div>
-  <div class="Contenedor_bar_list">
-      <bar-card></bar-card>
-    <bar-card></bar-card>
+  <div  class="Contenedor_bar_list">
+    <div v-for="bar in pubs" class="Fila_Card_Bar">
+      <bar_card :bar = "bar"></bar_card>
+    </div>
   </div>
 </template>
 
@@ -44,6 +45,7 @@ export default {
   height: auto;
   margin: auto;
   width: 90%;
+  max-width: 1100px;
   border: 2px solid white;
   box-shadow: inset 0 0 10px red, 0 0 10px red;
   border-radius: 10px;
@@ -52,5 +54,7 @@ export default {
   align-items: center;
   padding: 10px;
 }
-
+.Fila_Card_Bar{
+  width: 90%;
+}
 </style>
