@@ -19,20 +19,22 @@
         <button class="button-login button-empresa">Click Aquí</button>
       </divider>
     </div>
-
   </div>
 
 </template>
 
 
 <!--Styles-->
-<style scoped>
+
+<style>
+
 .container-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px;
+  margin-top: 8rem;
 }
 
 .image-sectores {
@@ -69,6 +71,10 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6rem rgba(17, 135, 173, 0.66);
+
+  cursor: pointer;
+
+
 }
 
 .button-cliente:hover {
@@ -92,21 +98,22 @@
   margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 6rem rgba(146, 63, 183, 0.66);
+
+  cursor: pointer;
+
+
 }
 
 .button-empresa:hover {
   background-color: rgb(201, 92, 248);
 }
 
-/* Estilos adicionales según tu preferencia */
-
-
-
 </style>
 
 
 <!--Scripts-->
 <script>
+/*enrutamos con metodos para la redireccion al hacer click en el boton de elegir sector*/
 export default {
   methods:{
     redirectToClientLogin(){
